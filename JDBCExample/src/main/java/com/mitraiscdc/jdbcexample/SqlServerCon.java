@@ -24,7 +24,7 @@ public class SqlServerCon {
                 = "jdbc:sqlserver://0.0.0.0:1433;"
                 + "database=JavaBootcamp;"
                 + "user=sa;"
-                + "password=*******;"
+                + "password=*******;" 
                 //                + "encrypt=true;"
                 + "trustServerCertificate=false;"
                 + "loginTimeout=30;";
