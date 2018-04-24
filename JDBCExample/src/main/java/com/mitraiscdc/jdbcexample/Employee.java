@@ -5,6 +5,12 @@
  */
 package com.mitraiscdc.jdbcexample;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
 /**
  *
  * @author Santo_HW432
@@ -12,7 +18,16 @@ package com.mitraiscdc.jdbcexample;
 public class Employee {
     private int Id;
     private String Name;
-    private int Age;
+    private Date DateOfBirth;
+    
+    
+    public Date getDateOfBirth() {
+        return DateOfBirth;
+    }
+
+    public void setDateOfBirth(Date DateOfBirth) {
+        this.DateOfBirth = DateOfBirth;
+    }
     
     public int getId() {
         return Id;
@@ -29,13 +44,4 @@ public class Employee {
     public void setName(String Name) {
         this.Name = Name;
     }
-
-    public int getAge() {
-        return Age;
-    }
-
-    public void setAge(int Age) {
-        this.Age = Age;
-    }
-    
 }

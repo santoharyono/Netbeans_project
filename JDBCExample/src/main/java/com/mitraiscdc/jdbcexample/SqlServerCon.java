@@ -9,6 +9,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +27,7 @@ public class SqlServerCon {
                 = "jdbc:sqlserver://0.0.0.0:1433;"
                 + "database=JavaBootcamp;"
                 + "user=sa;"
-                + "password=password;"
+                + "password=M4ch1nas;"
                 //                + "encrypt=true;"
                 + "trustServerCertificate=false;"
                 + "loginTimeout=30;";
@@ -57,12 +60,12 @@ public class SqlServerCon {
                         Employee employee = new Employee();
                         employee.setId(resultSet.getInt("Id"));
                         employee.setName(resultSet.getString("Name"));
-                        employee.setAge(resultSet.getInt("Age"));
+                        employee.setDateOfBirth(resultSet.getDate("DateOfBirth"));
                         employees.add(employee);
                     }
-                    
+
                     for (Employee employee : employees) {
-                        System.out.println(employee.getId() + " " + employee.getName() + " " + employee.getAge());
+                        System.out.println(employee.getId() + " " + employee.getName() + " " + employee.getDateOfBirth());
                     }
 //                    Close connection
                     connection.close();
