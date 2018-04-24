@@ -9,9 +9,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class SqlServerCon {
                 = "jdbc:sqlserver://0.0.0.0:1433;"
                 + "database=JavaBootcamp;"
                 + "user=sa;"
-                + "password=M4ch1nas;"
+                + "password=*******;"
                 //                + "encrypt=true;"
                 + "trustServerCertificate=false;"
                 + "loginTimeout=30;";
